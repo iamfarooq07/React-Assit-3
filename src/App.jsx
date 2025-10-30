@@ -31,6 +31,10 @@ function App() {
     setResult("");
     setIsEvaluated(false);
   }
+  function clearOne() {
+    setResult(result.slice(0, -1));
+    setIsEvaluated(false);
+  }
 
   function Histroy() {
     setShowHistory(!showHistory);
@@ -82,7 +86,7 @@ function App() {
           </button>
           <button
             value={"C"}
-            onClick={clear}
+            onClick={clearOne}
             className="bg-gray-100 text-lg py-3 rounded-xl font-semibold hover:bg-gray-200 transition "
           >
             C
